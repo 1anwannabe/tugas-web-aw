@@ -1,0 +1,640 @@
+body {
+    /* Mengatur font default ke 'Poppins' dengan fallback ke sans-serif */
+    font-family: 'Poppins', sans-serif;
+    /* Mengatur warna latar belakang abu-abu muda untuk seluruh halaman */
+    background-color: #f3f4f6;
+    /* Mengatur warna teks default ke abu-abu gelap */
+    color: #1f2937;
+    /* Menghapus margin default untuk tata letak layar penuh */
+    margin: 0;
+}
+
+/* Styling untuk navbar */
+.navbar {
+    /* Menggunakan gradien linear dari abu-abu gelap ke abu-abu lebih terang */
+    background: linear-gradient(90deg, #1f2937 0%, #374151 100%);
+    /* Menambahkan bayangan halus untuk efek kedalaman */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Memfiksasi navbar di bagian atas viewport */
+    position: fixed;
+    /* Memastikan navbar memenuhi lebar penuh viewport */
+    width: 100%;
+    /* Mengatur z-index tinggi agar navbar tetap di atas konten lain */
+    z-index: 1000;
+    /* Transisi halus untuk perubahan warna latar belakang */
+    transition: background-color 0.3s ease;
+}
+
+/* Styling untuk kontainer di dalam navbar */
+.container {
+    /* Mengatur lebar maksimum kontainer ke 1280px */
+    max-width: 1280px;
+    /* Mengatur margin otomatis di kiri dan kanan untuk memusatkan kontainer */
+    margin-left: auto;
+    margin-right: auto;
+    /* Menambahkan padding kiri dan kanan sebesar 1rem */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Styling untuk konten dalam navbar */
+.nav-content {
+    /* Menambahkan padding atas dan bawah sebesar 1.25rem */
+    padding: 1.25rem 0;
+    /* Mengatur tata letak flex untuk menempatkan elemen secara horizontal */
+    display: flex;
+    /* Mengatur jarak antar elemen agar merata di antara ruang yang tersedia */
+    justify-content: space-between;
+    /* Menyelaraskan elemen secara vertikal di tengah */
+    align-items: center;
+}
+
+/* Styling untuk logo di navbar */
+.logo {
+    /* Mengatur ukuran font logo menjadi 1.75rem */
+    font-size: 1.75rem;
+    /* Mengatur ketebalan font menjadi tebal (700) */
+    font-weight: 700;
+    /* Mengatur warna teks logo menjadi putih */
+    color: #ffffff;
+    /* Menambahkan jarak antar huruf sebesar 1px untuk estetika */
+    letter-spacing: 1px;
+    /* Transisi halus untuk efek transformasi */
+    transition: transform 0.3s ease;
+}
+
+/* Efek saat logo di-hover */
+.logo:hover {
+    /* Memperbesar logo sebesar 5% saat di-hover */
+    transform: scale(1.05);
+}
+
+/* Styling untuk daftar tautan di navbar */
+.nav-links {
+    /* Mengatur tata letak flex untuk tautan secara horizontal */
+    display: flex;
+    /* Menambahkan jarak antar tautan sebesar 2rem */
+    gap: 2rem;
+}
+
+/* Styling untuk tautan di dalam nav-links */
+.nav-links a {
+    /* Mengatur warna teks tautan menjadi abu-abu terang */
+    color: #e5e7eb;
+    /* Menghapus dekorasi garis bawah pada tautan */
+    text-decoration: none;
+    /* Mengatur ketebalan font menjadi sedang (500) */
+    font-weight: 500;
+    /* Mengatur posisi relatif untuk elemen pseudo seperti ::after */
+    position: relative;
+    /* Transisi halus untuk perubahan warna */
+    transition: color 0.3s ease;
+}
+
+/* Membuat garis bawah untuk tautan menggunakan pseudo-element */
+.nav-links a::after {
+    /* Menambahkan konten kosong untuk pseudo-element */
+    content: '';
+    /* Mengatur posisi absolut di bawah tautan */
+    position: absolute;
+    /* Mengatur lebar awal garis bawah menjadi 0 */
+    width: 0;
+    /* Mengatur ketinggian garis bawah menjadi 2px */
+    height: 2px;
+    /* Mengatur posisi garis bawah 4px di bawah tautan */
+    bottom: -4px;
+    /* Mengatur posisi kiri garis bawah */
+    left: 0;
+    /* Mengatur warna garis bawah menjadi hijau */
+    background-color: #22c55e;
+    /* Transisi halus untuk perubahan lebar garis bawah */
+    transition: width 0.3s ease;
+}
+
+/* Efek saat tautan di-hover */
+.nav-links a:hover::after {
+    /* Mengatur lebar garis bawah menjadi 100% saat di-hover */
+    width: 100%;
+}
+
+/* Mengubah warna tautan saat di-hover */
+.nav-links a:hover {
+    /* Mengubah warna teks menjadi hijau saat di-hover */
+    color: #22c55e;
+}
+
+/* Styling untuk menu hamburger (khususnya untuk tampilan mobile) */
+.hamburger {
+    /* Menyembunyikan menu hamburger secara default */
+    display: none;
+    /* Mengatur tata letak flex untuk menumpuk garis hamburger secara vertikal */
+    flex-direction: column;
+    /* Mengatur kursor menjadi pointer untuk interaksi */
+    cursor: pointer;
+    /* Menambahkan jarak antar garis hamburger sebesar 5px */
+    gap: 5px;
+}
+
+/* Styling untuk garis-garis pada menu hamburger */
+_.
+
+hamburger span {
+    /* Mengatur lebar garis hamburger menjadi 25px */
+    width: 25px;
+    /* Mengatur ketinggian garis hamburger menjadi 3px */
+    height: 3px;
+    /* Mengatur warna latar belakang garis menjadi putih */
+    background-color: #ffffff;
+    /* Transisi halus untuk semua perubahan properti */
+    transition: all 0.3s ease;
+}
+
+/* Styling untuk garis pertama hamburger saat aktif */
+.hamburger.active span:nth-child(1) {
+    /* Memutar garis pertama 45 derajat dan menggesernya */
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+/* Styling untuk garis kedua hamburger saat aktif */
+.hamburger.active span:nth-child(2) {
+    /* Menyembunyikan garis kedua saat hamburger aktif */
+    opacity: 0;
+}
+
+/* Styling untuk garis ketiga hamburger saat aktif */
+.hamburger.active span:nth-child(3) {
+    /* Memutar garis ketiga -45 derajat dan menggesernya */
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Media query untuk responsivitas pada layar kecil (maksimum 768px) */
+@media (max-width: 768px) {
+    /* Styling untuk nav-links pada layar kecil */
+    .nav-links {
+        /* Menyembunyikan nav-links secara default */
+        display: none;
+        /* Mengatur posisi absolut di bawah navbar */
+        position: absolute;
+        /* Mengatur posisi atas sejajar dengan bagian bawah navbar */
+        top: 100%;
+        /* Mengatur posisi kiri ke 0 */
+        left: 0;
+        /* Mengatur lebar penuh */
+        width: 100%;
+        /* Mengatur latar belakang abu-abu gelap */
+        background: #1f2937;
+        /* Mengatur tata letak flex menjadi vertikal */
+        flex-direction: column;
+        /* Menambahkan padding sebesar 1rem */
+        padding: 1rem;
+        /* Menyelaraskan teks ke tengah */
+        text-align: center;
+    }
+
+    /* Menampilkan nav-links saat kelas active ditambahkan */
+    .nav-links.active {
+        /* Mengatur display ke flex untuk menampilkan tautan */
+        display: flex;
+    }
+
+    /* Menampilkan menu hamburger pada layar kecil */
+    .hamburger {
+        /* Mengatur display ke flex untuk menampilkan hamburger */
+        display: flex;
+    }
+}
+
+/* Styling untuk hero section */
+#home {
+    /* Mengatur tinggi minimum ke 100% tinggi viewport */
+    min-height: 100vh;
+    /* Mengatur tata letak flex untuk menyelaraskan konten */
+    display: flex;
+    /* Menyelaraskan item secara vertikal di tengah */
+    align-items: center;
+    /* Mengatur gambar latar belakang agar menutupi seluruh area */
+    background-size: cover;
+    /* Mengatur posisi gambar latar belakang ke tengah */
+    background-position: center;
+}
+
+/* Styling untuk konten di dalam hero section */
+.hero-content {
+    /* Menyelaraskan teks ke tengah */
+    text-align: center;
+    /* Mengatur warna teks menjadi putih */
+    color: #ffffff;
+}
+
+/* Styling untuk judul di hero section */
+.hero-title {
+    /* Mengatur ukuran font menjadi 3rem */
+    font-size: 3rem;
+    /* Mengatur ketebalan font menjadi tebal (700) */
+    font-weight: 700;
+    /* Menambahkan margin bawah sebesar 1rem */
+    margin-bottom: 1rem;
+}
+
+/* Styling untuk teks di hero section */
+.hero-text {
+    /* Mengatur ukuran font menjadi 1.25rem */
+    font-size: 1.25rem;
+    /* Menambahkan margin bawah sebesar 1.5rem */
+    margin-bottom: 1.5rem;
+}
+
+/* Styling untuk tombol */
+.btn {
+    /* Mengatur display ke inline-block untuk elemen tombol */
+    display: inline-block;
+    /* Mengatur latar belakang tombol ke abu-abu gelap */
+    background-color: #1f2937;
+    /* Mengatur warna teks tombol menjadi putih */
+    color: #ffffff;
+    /* Menambahkan padding 0.75rem secara vertikal dan 1.5rem secara horizontal */
+    padding: 0.75rem 1.5rem;
+    /* Mengatur sudut border menjadi sangat bulat */
+    border-radius: 9999px;
+    /* Menghapus dekorasi teks seperti garis bawah */
+    text-decoration: none;
+}
+
+/* Efek saat tombol di-hover */
+.btn:hover {
+    /* Mengubah warna latar belakang menjadi abu-abu lebih terang saat di-hover */
+    background-color: #374151;
+}
+
+/* Styling untuk section menu */
+#menu {
+    /* Menambahkan padding atas dan bawah sebesar 4rem */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    /* Mengatur latar belakang menjadi putih */
+    background-color: #ffffff;
+}
+
+/* Styling untuk judul section */
+.section-title {
+    /* Mengatur ukuran font menjadi 1.875rem */
+    font-size: 1.875rem;
+    /* Mengatur ketebalan font menjadi tebal (600) */
+    font-weight: 600;
+    /* Menyelaraskan teks ke tengah */
+    text-align: center;
+    /* Menambahkan margin bawah sebesar 3rem */
+    margin-bottom: 3rem;
+}
+
+/* Styling untuk grid menu */
+.menu-grid {
+    /* Mengatur tata letak grid dengan satu kolom */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Menambahkan jarak antar item grid sebesar 2rem */
+    gap: 2rem;
+}
+
+/* Media query untuk layar lebih besar dari 768px */
+@media (min-width: 768px) {
+    /* Styling untuk grid menu pada layar besar */
+    .menu-grid {
+        /* Mengatur grid dengan tiga kolom berukuran sama */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Styling untuk item menu */
+.menu-item {
+    /* Menyelaraskan teks ke tengah */
+    text-align: center;
+    /* Mengatur kursor menjadi pointer untuk interaksi */
+    cursor: pointer;
+}
+
+/* Styling untuk gambar dalam item menu */
+.menu-item img {
+    /* Mengatur lebar gambar ke 100% dari kontainer */
+    width: 100%;
+    /* Mengatur tinggi gambar menjadi 12rem */
+    height: 12rem;
+    /* Memastikan gambar menyesuaikan tanpa distorsi */
+    object-fit: cover;
+    /* Mengatur sudut border gambar menjadi 0.5rem */
+    border-radius: 0.5rem;
+    /* Menambahkan margin bawah sebesar 1rem */
+    margin-bottom: 1rem;
+}
+
+/* Styling untuk judul item menu */
+.menu-item h3 {
+    /* Mengatur ukuran font menjadi 1.25rem */
+    font-size: 1.25rem;
+    /* Mengatur ketebalan font menjadi tebal (600) */
+    font-weight: 600;
+}
+
+/* Styling untuk teks deskripsi item menu */
+.menu-item p {
+    /* Mengatur warna teks menjadi abu-abu */
+    color: #4b5563;
+}
+
+/* Styling untuk section about */
+#about {
+    /* Menambahkan padding atas dan bawah sebesar 4rem */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    /* Mengatur latar belakang menjadi abu-abu muda */
+    background-color: #f3f4f6;
+}
+
+/* Styling untuk konten di section about */
+.about-content {
+    /* Menyelaraskan teks ke tengah */
+    text-align: center;
+}
+
+/* Styling untuk teks di section about */
+.about-text {
+    /* Mengatur ukuran font menjadi 1.125rem */
+    font-size: 1.125rem;
+    /* Mengatur warna teks menjadi abu-abu */
+    color: #4b5563;
+    /* Mengatur lebar maksimum teks menjadi 32rem */
+    max-width: 32rem;
+    /* Mengatur margin otomatis untuk memusatkan teks */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling untuk section contact */
+#contact {
+    /* Menambahkan padding atas dan bawah sebesar 4rem */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    /* Mengatur latar belakang menjadi putih */
+    background-color: #ffffff;
+}
+
+/* Styling untuk konten di section contact */
+.contact-content {
+    /* Menyelaraskan teks ke tengah */
+    text-align: center;
+}
+
+/* Styling untuk teks di section contact */
+.contact-text {
+    /* Mengatur ukuran font menjadi 1.125rem */
+    font-size: 1.125rem;
+    /* Mengatur warna teks menjadi abu-abu */
+    color: #4b5563;
+    /* Menambahkan margin bawah sebesar 1rem */
+    margin-bottom: 1rem;
+}
+
+/* Styling untuk footer */
+footer {
+    /* Mengatur latar belakang menjadi abu-abu gelap */
+    background-color: #1f2937;
+    /* Mengatur warna teks menjadi putih */
+    color: #ffffff;
+    /* Menambahkan padding atas dan bawah sebesar 1.5rem */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    /* Menyelaraskan teks ke tengah */
+    text-align: center;
+}
+
+/* Styling untuk modal */
+#menuModal {
+    /* Mengatur posisi tetap untuk menutupi seluruh layar */
+    position: fixed;
+    /* Mengatur posisi modal ke seluruh sisi layar */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Mengatur latar belakang semi-transparan */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Mengatur tata letak flex untuk menyelaraskan konten */
+    display: flex;
+    /* Menyelaraskan item secara vertikal di tengah */
+    align-items: center;
+    /* Menyelaraskan item secara horizontal di tengah */
+    justify-content: center;
+    /* Menyembunyikan modal secara default */
+    display: none;
+}
+
+/* Styling untuk konten di dalam modal */
+.modal-content {
+    /* Mengatur latar belakang menjadi putih */
+    background-color: #ffffff;
+    /* Menambahkan padding sebesar 1.5rem */
+    padding: 1.5rem;
+    /* Mengatur sudut border menjadi 0.5rem */
+    border-radius: 0.5rem;
+    /* Mengatur lebar maksimum modal menjadi 28rem */
+    max-width: 28rem;
+    /* Mengatur lebar modal menjadi 90% dari kontainer */
+    width: 90%;
+}
+
+/* Styling untuk judul di modal */
+.modal-title {
+    /* Mengatur ukuran font menjadi 1.5rem */
+    font-size: 1.5rem;
+    /* Mengatur ketebalan font menjadi tebal (600) */
+    font-weight: 600;
+    /* Menambahkan margin bawah sebesar 0.5rem */
+    margin-bottom: 0.5rem;
+}
+
+/* Styling untuk harga dan deskripsi di modal */
+.modal-price, .modal-desc {
+    /* Mengatur warna teks menjadi abu-abu */
+    color: #4b5563;
+    /* Menambahkan margin bawah sebesar 1.5rem */
+    margin-bottom: 1.5rem;
+}
+
+/* Styling untuk bagian order di modal */
+.order-section {
+    /* Menambahkan margin bawah sebesar 1.5rem */
+    margin-bottom: 1.5rem;
+}
+
+/* Styling untuk judul di bagian order */
+.order-section h4 {
+    /* Mengatur ukuran font menjadi 1.125rem */
+    font-size: 1.125rem;
+    /* Mengatur ketebalan font menjadi tebal (600) */
+    font-weight: 600;
+    /* Menambahkan margin bawah sebesar 0.5rem */
+    margin-bottom: 0.5rem;
+}
+
+/* Styling untuk label di bagian order */
+.order-section label {
+    /* Mengatur display ke block untuk menempati baris penuh */
+    display: block;
+    /* Mengatur warna teks menjadi abu-abu */
+    color: #4b5563;
+    /* Menambahkan margin bawah sebesar 0.25rem */
+    margin-bottom: 0.25rem;
+}
+
+/* Styling untuk input dan textarea di bagian order */
+.order-section input, .order-section textarea {
+    /* Mengatur lebar ke 100% dari kontainer */
+    width: 100%;
+    /* Menambahkan padding sebesar 0.5rem */
+    padding: 0.5rem;
+    /* Mengatur border abu-abu dengan ketebalan 1px */
+    border: 1px solid #d1d5db;
+    /* Mengatur sudut border menjadi 0.5rem */
+    border-radius: 0.5rem;
+}
+
+/* Styling untuk textarea di bagian order */
+.order-section textarea {
+    /* Mengatur resize hanya untuk arah vertikal */
+    resize: vertical;
+}
+
+/* Styling untuk tombol penuh */
+.btn-full {
+    /* Mengatur lebar ke 100% dari kontainer */
+    width: 100%;
+    /* Mengatur latar belakang menjadi abu-abu gelap */
+    background-color: #1f2937;
+    /* Mengatur warna teks menjadi putih */
+    color: #ffffff;
+    /* Menambahkan padding 0.5rem secara vertikal dan 1rem secara horizontal */
+    padding: 0.5rem 1rem;
+    /* Mengatur sudut border menjadi sangat bulat */
+    border-radius: 9999px;
+    /* Menyelaraskan teks ke tengah */
+    text-align: center;
+    /* Menghapus border default */
+    border: none;
+    /* Mengatur kursor menjadi pointer untuk interaksi */
+    cursor: pointer;
+}
+
+/* Efek saat tombol penuh di-hover */
+.btn-full:hover {
+    /* Mengubah warna latar belakang menjadi abu-abu lebih terang saat di-hover */
+    background-color: #374151;
+}
+
+/* Styling untuk tombol tutup */
+.btn-close {
+    /* Mengatur latar belakang menjadi abu-abu */
+    background-color: #4b5563;
+}
+
+/* Efek saat tombol tutup di-hover */
+.btn-close:hover {
+    /* Mengubah warna latar belakang menjadi abu-abu lebih terang saat di-hover */
+    background-color: #6b7280;
+}
+
+/* Styling untuk notifikasi */
+#notification {
+    /* Mengatur posisi tetap di sudut kanan atas */
+    position: fixed;
+    /* Mengatur jarak dari atas sebesar 1rem */
+    top: 1rem;
+    /* Mengatur jarak dari kanan sebesar 1rem */
+    right: 1rem;
+    /* Mengatur latar belakang menjadi hijau */
+    background-color: #22c55e;
+    /* Mengatur warna teks menjadi putih */
+    color: #ffffff;
+    /* Menambahkan padding sebesar 1.5rem */
+    padding: 1.5rem;
+    /* Mengatur sudut border menjadi 0.5rem */
+    border-radius: 0.5rem;
+    /* Menambahkan bayangan untuk efek kedalaman */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Menyembunyikan notifikasi secara default */
+    display: none;
+    /* Mengatur opasitas awal menjadi 0 */
+    opacity: 0;
+    /* Menggeser notifikasi ke atas sebesar 20px */
+    transform: translateY(-20px);
+    /* Transisi halus untuk opasitas dan transformasi */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Mengatur z-index tinggi untuk menempatkan di atas konten lain */
+    z-index: 1001;
+    /* Mengatur lebar maksimum menjadi 90% dari kontainer */
+    max-width: 90%;
+    /* Mengatur ketebalan font menjadi sedang (500) */
+    font-weight: 500;
+}
+
+/* Styling untuk notifikasi saat ditampilkan */
+#notification.show {
+    /* Menampilkan notifikasi */
+    display: block;
+    /* Mengatur opasitas menjadi 1 */
+    opacity: 1;
+    /* Mengembalikan posisi ke normal */
+    transform: translateY(0);
+}
+
+/* Styling untuk notifikasi dengan status error */
+#notification.error {
+    /* Mengatur latar belakang menjadi merah untuk notifikasi error */
+    background-color: #ef4444;
+}
+
+/* Styling untuk tombol "Balik ke Atas" */
+#BalikKeAtas {
+    /* Mengatur posisi tetap di sudut kanan bawah */
+    position: fixed;
+    /* Mengatur jarak dari bawah sebesar 2rem */
+    bottom: 2rem;
+    /* Mengatur jarak dari kanan sebesar 2rem */
+    right: 2rem;
+    /* Mengatur latar belakang menjadi abu-abu gelap */
+    background-color: #1f2937;
+    /* Mengatur warna teks menjadi putih */
+    color: #ffffff;
+    /* Menambahkan padding sebesar 0.75rem */
+    padding: 0.75rem;
+    /* Mengatur sudut border menjadi sangat bulat */
+    border-radius: 9999px;
+    /* Menyembunyikan tombol secara default */
+    display: none;
+    /* Mengatur kursor menjadi pointer untuk interaksi */
+    cursor: pointer;
+}
+
+/* Efek saat tombol "Balik ke Atas" di-hover */
+#BalikKeAtas:hover {
+    /* Mengubah warna latar belakang menjadi abu-abu lebih terang saat di-hover */
+    background-color: #374151;
+}
+
+/* Styling untuk animasi pada section */
+section {
+    /* Mengatur opasitas awal menjadi 0 (tak terlihat) */
+    opacity: 0;
+    /* Menggeser section ke bawah sebesar 2.5rem */
+    transform: translateY(2.5rem);
+    /* Transisi halus untuk semua perubahan properti selama 0.5 detik */
+    transition: all 0.5s;
+}
+
+/* Styling untuk section saat terlihat */
+section.visible {
+    /* Mengatur opasitas menjadi 1 (terlihat) */
+    opacity: 1;
+    /* Mengembalikan posisi ke normal */
+    transform: translateY(0);
+}
+```
