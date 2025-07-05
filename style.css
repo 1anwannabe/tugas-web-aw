@@ -136,9 +136,8 @@ body {
 }
 
 /* Styling untuk garis-garis pada menu hamburger */
-_.
 
-hamburger span {
+.hamburger span {
     /* Mengatur lebar garis hamburger menjadi 25px */
     width: 25px;
     /* Mengatur ketinggian garis hamburger menjadi 3px */
@@ -637,4 +636,3 @@ section.visible {
     /* Mengembalikan posisi ke normal */
     transform: translateY(0);
 }
-```
