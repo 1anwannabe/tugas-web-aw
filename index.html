@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nias Coffee - Modern Coffee Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <h1 class="logo">Nias Coffee</h1>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <!-- ini berfungsi sebagai menu navigasi untuk membantu pengguna berpindah antar halaman atau bagian dari website dengan mudah-->
+  
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085')">
+        <div class="container hero-content">
+            <h2 class="hero-title">Welcome to Nias Coffee</h2>
+            <p class="hero-text">Crafted Coffee, Cozy Vibes, Modern Taste</p>
+            <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+    </section>
+    <!-- ini berfungsi sebagai bagian paling atas dari website ini,bisa di bilang ini adalah pintu depan atau muka dari website ini -->
+
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="menu-grid">
+                <!-- Menu Item 1 -->
+                <div class="menu-item" data-name="Espresso" data-price="$3.50" data-desc="Rich and bold single shot of espresso, brewed to perfection.">
+                    <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="Espresso">
+                    <h3>Espresso</h3>
+                    <p>$3.50</p>
+                </div>
+                <!-- Menu Item 2 -->
+                <div class="menu-item" data-name="Cappuccino" data-price="$4.00" data-desc="Smooth espresso topped with frothy milk and a sprinkle cocoa.">
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd" alt="Cappuccino">
+                    <h3>Cappuccino</h3>
+                    <p>$4.00</p>
+                </div>
+                <!-- Menu Item 3 -->
+                <div class="menu-item" data-name="Latte" data-price="$4.50" data-desc="Creamy espresso blended with steamed milk for a balanced flavor.">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Latte">
+                    <h3>Latte</h3>
+                    <p>$4.50</p>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- ini berfungsi sebagai daftar menu atau pilihan utama yang ditawarkan kepada pengunjung website  -->
+
+     <!-- About Section -->
+    <section id="about">
+        <div class="container about-content">
+            <h2 class="section-title">About Us</h2>
+            <p class="about-text">Nias Coffee is a modern coffee shop dedicated to serving high-quality coffee in a minimalist, cozy environment. Our passion is crafting the perfect cup while fostering a community of coffee lovers.</p>
+        </div>
+    </section>
+     <!-- ini berfungsi sebagai tanda pengenal siapa yang punya website ini dan apa tujuan website/usahanya-->
+    
+     <!-- Contact Section -->
+    <section id="contact">
+        <div class="container contact-content">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="contact-text">Temui Kita Di: Tembung Medan, Brew City</p>
+            <p class="contact-text">Email: farelabgniasselebew@gmail.com</p>
+            <p class="contact-text">Phone: 087777666655544</p>
+            <a href="mailto:hello@niascoffee.com" class="btn">Kirimkan Kami Pesan</a>
+        </div>
+    </section>
+      <!-- ini berfungsi untuk memberitahu pelanggan untuk kerjasama/bisnis -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Nias Coffee. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Menu Details and Order -->
+    <div id="menuModal">
+        <div class="modal-content">
+            <h3 id="modalTitle" class="modal-title"></h3>
+            <p id="modalPrice" class="modal-price"></p>
+            <p id="modalDesc" class="modal-desc"></p>
+            <div class="order-section">
+                <h4>Place Your Order</h4>
+                <div>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" min="1" value="1">
+                </div>
+                <div>
+                    <label for="notes">Special Notes:</label>
+                    <textarea id="notes" rows="3" placeholder="E.g., Less sugar, extra foam"></textarea>
+                </div>
+                <button id="submitOrder" class="btn-full">Add to Order</button>
+            </div>
+            <button id="closeModal" class="btn-full btn-close">Close</button>
+        </div>
+    </div>
+    <!-- ini berfungsi untuk menampilkan info lengkap soal menu -->
+
+    <!-- Notification -->
+    <div id="notification">
+        <p id="notificationText"></p>
+    </div>
+    <!--ini berfungsi untuk memberitahu informasi atau update kepada pengguna -->
+
+    <!-- Back to Top Button -->
+    <button id="BalikKeAtas">↑ Top</button>
+    <!-- ini berfungsi untuk mempermudah pengguna untuk balik ke atas -->
+
+    <script src="/script.js"></script>
+</body>
+</html>
